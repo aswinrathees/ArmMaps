@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ArmMaps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" showsScale="YES" showsUserTrackingButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fwl-QV-yhr">
+                                <rect key="frame" x="0.0" y="109" width="393" height="709"/>
+                                <imageryMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLX-Dz-s4v">
+                                <rect key="frame" x="0.0" y="64" width="393" height="44"/>
+                                <items>
+                                    <navigationItem title="Location" id="Rst-cz-KOr">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="EcS-4M-j6j">
+                                            <connections>
+                                                <action selector="addLocation:" destination="BYZ-38-t0r" id="tv5-ag-ZqB"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fwl-QV-yhr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EiK-n3-SYs"/>
+                            <constraint firstItem="HLX-Dz-s4v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="SEu-Mk-7Ph"/>
+                            <constraint firstItem="fwl-QV-yhr" firstAttribute="top" secondItem="HLX-Dz-s4v" secondAttribute="bottom" constant="1" id="X2s-cs-Z4p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fwl-QV-yhr" secondAttribute="bottom" id="hQU-T2-18E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fwl-QV-yhr" secondAttribute="trailing" id="kYd-5U-R31"/>
+                            <constraint firstItem="HLX-Dz-s4v" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rRj-fm-Eif"/>
+                            <constraint firstItem="HLX-Dz-s4v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u2w-6O-dPS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="fwl-QV-yhr" id="VQw-Rp-gLm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
